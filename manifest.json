@@ -1,0 +1,26 @@
+{
+"name":"Ottoneu Expanded Data",
+"description":"Extra data for Ottoneu",
+"version":"2.0",
+"manifest_version":2,
+"icons": { 
+    "128": "icon_128.png" 
+},
+"options_ui": {
+	"page": "options.html",
+	"chrome_style": true
+},
+"permissions": [
+    "storage"
+],
+"content_scripts": [
+    {
+      "matches": ["http://ottoneu.fangraphs.com/*/setlineups*","https://ottoneu.fangraphs.com/*/setlineups*"],
+      "js": ["setlineups.js"]
+    },
+    {
+      "matches": ["http://ottoneu.fangraphs.com/*/playercard*","https://ottoneu.fangraphs.com/*/playercard*"],
+      "js": ["playercard.js"]
+    }
+  ]
+}
